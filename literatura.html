@@ -1,0 +1,813 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+
+        .navbar {
+            background-color: #fdfff2;
+            padding: 10px;
+        }
+
+        .navbar-brand img {
+            max-height: 50px;
+        }
+
+        .nav-link {
+            color: #0e0249 !important;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            color: #fff84e !important;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHN0eWxlPSJmaWxsOiBub25lOyBzdHJva2U6IHdoaXRlOyBzdHJva2UtbGluZWpvaW4tY29sb3I6IHdoaXRlOyIvPjwvc3ZnPg==');
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .footer {
+            background-color: #60cd52;
+            color: #02641c;
+        }
+
+        .footer-social-icons {
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            width: 90px;
+            height: 50px;
+            transition: transform 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .primeirainfo h1 {
+            font-size: 80px;
+            color: #5263ff;
+            font-weight: bolder;
+
+        }
+
+        .primeirainfo b {
+            color: #5263ff;
+        }
+
+        .segundainfo h1 {
+            font-size: 80px;
+            color: #60cd52;
+            font-weight: bolder;
+        }
+
+        .segundainfo b {
+            color: #60cd52;
+        }
+
+        .terceirainfo h1 {
+            font-size: 80px;
+            color:  #ffc107;
+            font-weight: bolder;
+        }
+
+        .terceirainfo b {
+            color:  #ffc107;
+        }
+
+       
+
+        p {
+            font-size: 20px;
+            color: #0e0249;
+        }
+
+        .rounded-img {
+            border-radius: 15px;
+            /* Arredonda os cantos */
+            max-width: 100%;
+            /* Garante que a imagem não ultrapasse o container */
+            display: block;
+            /* Torna a imagem um elemento de bloco */
+            margin: 0 auto;
+            /* Centraliza a imagem horizontalmente */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="image/7.png" alt="Logo" width="400" height="105">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="literatura.html">Literaturano Brasil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="historia.html">História no Brasil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cultura.html">Cultura Indígena e Afrodescendente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Página Inicial</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Conteúdo principal com grid -->
+    <div class="primeirainfo">
+        <div class="container my-4">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <!-- Card -->
+                    <div class="card" style="width: 100%;">
+                        <img src="image/quinhentismo.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#Modal_Quinhentismo">Obras e Autores</button>
+                        </div>
+
+                        <div class="modal" tabindex="-1" id="Modal_Quinhentismo">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Quinhentismo</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="image/perovaz.png" class="w-100">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item active bg-dark">Pero Vaz de Caminha (1450 - 1500) - Carta de Pero Vaz de Caminha
+                                            </li>
+                                            <li class="list-group-item">José de Anchieta (1534 - 1597) - De Gestis Mendi de Saa</li>
+                                            <li class="list-group-item">Padre Manuel da Nóbrega  (1517 - 1570) - Carta ao Rei de Portugal</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <!-- Texto ao lado do card -->
+                    <div>
+                        <h1>Quinhentismo (1500 - 1600)</h1>
+                        <p>Movimento literário que compreendeu as manifestações culturais <b>escritas no primeiro século
+                                da colonização brasileira.</b> Resumindo, é possível reconhecer dois grupos de
+                            composição textual na época:</p>
+                        <ul>
+                            <li>
+                                <b>Literatura de informação:</b> tem como função descrever o processo de domínio sob o
+                                território brasileiro. O principal escritor desse grupo é Pero Vaz de Caminha, e sua
+                                famosa carta é um dos mais importantes documentos históricos do período. Sua estrutura é
+                                a de uma narrativa em primeira pessoa com certa tendência subjetiva na descrição dos
+                                espaços e da sociedade indígena que vivia no Brasil quando ocorreu a chegada portuguesa.
+                            </li>
+                            <li>
+                                <b>Literatura de Formação:</b> esse grupo literário é composto por poemas, cartas,
+                                sermões e peças de teatro produzidos pelos padres jesuítas que desembarcaram no Brasil
+                                no início da colonização. Tais produções tinham como principal função catequizar os
+                                nativos do território.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-4 segundainfo">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <!-- Card -->
+                    <div class="card" style="width: 100%;">
+                        <img src="image/barroco.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-lg btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#Modal_Barroco">Obras e Autores</button>
+                            </div>
+                        </div>
+                        <div class="modal" tabindex="-1" id="Modal_Barroco">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Barroco</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="image/poesia.png" class="w-100">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item active bg-dark">Gregório de Matos (1636 - 1696) - Poemas</li>
+                                            <li class="list-group-item">Padre Antônio Vieira (1608 - 1697) - Sermões</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <!-- Texto ao lado do card -->
+                    <div>
+                        <h1>Barroco (1580 - 1756)</h1>
+                        <p>Estilo artístico, que surgiu no século XVI e se estendeu até meados do século XVIII,
+                            característico por <b>elementos exagerados, contrastes marcantes e grande
+                                expressividade.</b>
+                            Esse movimento surgiu na Itália com objetivo de unir as ideias <b>renascentistas</b> de que
+                            o homem era o centro de tudo às ideias teocêntricas da Contrarreforma. É um arte marcada
+                            pela angústia da tentativa dessa união.</p>
+                        <ul>
+                            <li>
+                                <b>Cultismo:</b> focado na poesia, possuía um grande apreço pelos jogos de palavras, de
+                                imagens e jogos de construção - havia uma estrutura determinada para os poemas.
+                            </li>
+                            <li>
+                                <b>Conceptismo:</b> também conhecido como quevedismo, seu foco era a prosa e sua
+                                preocupação era seduzir o leitor pelo conteúdo e não tanto pela escolha das palavras.
+
+                            </li>
+                        </ul>
+                        <p>A literatura brasileira começa no barroco, no século XIX, com o poema <b>"Prosopopeia", de
+                                Bento Teixeira.</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-4 terceirainfo">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <!-- Card -->
+                    <div class="card" style="width: 100%;">
+                        <img src="image/arcadismo.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-lg btn-warning"data-bs-toggle="modal"
+                                    data-bs-target="#Modal_Arcadismo">Obras e Autores</button>
+                            </div>
+                        </div>
+                        <div class="modal" tabindex="-1" id="Modal_Arcadismo">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Arcadismo</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="image/marilia.png" class="w-100">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item active bg-dark">Tomás Antônio Gonzaga (1744 - 1810) - Marília de Dirceu</li>
+                                            <li class="list-group-item">Cláudio Manuel da Costa (1729 - 1789) - Vila Rica</li>
+                                            <li class="list-group-item">José Basílio da Gama (1741 - 1795) - O Uraguay</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <!-- Texto ao lado do card -->
+                    <div>
+                        <h1>Arcadismo (1768 - 1835)</h1>
+                        <p>A corrente literária árcade, influenciada pelos ideais do Iluminismo no século XVIII, visava
+                            retornar alguns marcos artísticos do período renascentista. Com o intuito de promover o
+                            racionalismo na poesia, o Arcadismo é caracterizado pela <b>temática mais pastoril e
+                                bucólica,</b> contrariando os apegos materialistas que marcavam aquele momento e
+                            resgatando alguns aspectos da cultura clássica.
+                            A linguagem e forma estrutural das poesias árcades tem a presença de:</p>
+                        <ul>
+                            <li>
+                                Sonetos;
+                            </li>
+                            <li>
+                                Versos decassílabos;
+                            </li>
+                            <li>
+                                Ordem direta;
+                            </li>
+                            <li>
+                                Linguagem mais simples;
+                            </li>
+                        </ul>
+                        <p><b>Cartas Chilenas:</b> durante a Inconfidência Mineira, autores e intelectuais eram
+                            engajados politicamente e lutavam contra as tiranias do governo. As cartas chilenas
+                            tratam-se de poemas que criticavam o abuso de poder e satirizavam os desmandos
+                            administrativos da região mineira.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-4">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <!-- Card -->
+                    <div class="card" style="width: 100%;">
+                        <img src="image/romantismo.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#Modal_Romantismo">Obras e Autores</button>
+                            </div>
+                        </div>
+                        <div class="modal" tabindex="-1" id="Modal_Romantismo">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Romantismo</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="image/oguarani.png" class="w-100">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item active bg-dark">José de Alencar (1829 - 1877) - O Guarani, Iracema</li>
+                                            <li class="list-group-item">Gonçalves Dias (1823 - 1864) - Os Timbiras, Canções Americanas</li>
+                                            <li class="list-group-item">Álvares de Azevedo (1831 - 1852) - Lira dos Vinte Anos, Noite na Taverna</li>
+                                            <li class="list-group-item">Joaquim Manuel de Macedo (1820 - 1882) - A Moreninha, O Moço Loiro</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <!-- Texto ao lado do card -->
+                    <div>
+                        <h1>Romantismo (1836 - 1880)</h1>
+                        <p>Movimento artístico e cultural, que surgiu na Europa no século XVIII, que privilegia as
+                            emoções, a subjetividade e o individualismo, além de apresentar uma visão de mundo centrada
+                            no seu humano, com destaque para as sensações humanas e a liberdade de pensamento.
+                        </p>
+                        <ul>
+                            <li>
+                                <b>Primeira Geração Romântica (1836 a 1852):</b> Geração nacionalista-indianista.
+                            </li>
+                            <li>
+                                <b>Segunda Geração Romântica (1853 a 1869):</b> Geração ultrarromântica.
+                            </li>
+                            <li>
+                                <b>Terceira Geração Romântica (1870 a 1880):</b> geração condoreira.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="segundainfo">
+        <div class="container my-4">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <!-- Card -->
+                    <div class="card" style="width: 100%;">
+                        <img src="image/realismo.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-lg btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#Modal_Realismo">Obras e Autores</button>
+                            </div>
+                        </div>
+                        <div class="modal" tabindex="-1" id="Modal_Realismo">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Realismo</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="image/bras.png" class="w-100">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item active bg-dark">Machado de Assis (1839 - 1908) - Memórias Póstumas de Brás Cubas, Dom Casmurro, Quincas Borba</li>
+                                            <li class="list-group-item">José do Patrocínio (1853 - 1905) - O Cabelo de Lã, A Voz do Província</li>
+                                            <li class="list-group-item">Lúcio de Mendonça (1851 - 1903) - O Estudante, O Perigo</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <!-- Texto ao lado do card -->
+                    <div>
+                        <h1>Realismo (1881 - 1893)</h1>
+                        <p>Manifestação cultural que teve início em meados do século XIX, na França. Esse movimento
+                            literário e artístico significou <b>um olhar mais realista e objetivo sobre a existência e
+                                as relação humanas,</b> surgindo como oposição ao romantismo e sua visão idealizada da
+                            vida.
+                        </p>
+                        <p>Realismo no Brasil: o realismo surge durante o Segundo Reinado de Dom Pedro II como uma
+                            maneira de criticar a sociedade burguesa e a monarquia, <b>expondo contradições e
+                                desigualdades sociais.</b> Isso porque, foi o período em que ocorre a abolição da
+                            escravatura, a chegada de imigrantes e diversos avanços tecnológicos.
+                            É na figura de <b>Machado de Assis</b> que o movimento ganha seu maior representante
+                            nacional. A publicação de Memórias Póstumas de Brás Cubas, em 1881, foi o marco do movimento
+                            no país, sendo considerado o primeiro romance realista brasileiro.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-4 terceirainfo">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <!-- Card -->
+                    <div class="card" style="width: 100%;">
+                        <img src="image/naturalismo.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-lg btn-warning" data-bs-toggle="modal"
+                                    data-bs-target="#Modal_Naturalismo">Obras e Autores</button>
+                            </div>
+                        </div>
+                        <div class="modal" tabindex="-1" id="Modal_Naturalismo">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Naturalismo</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="image/cortico.png" class="w-100">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item active bg-dark">Aluísio Azevedo (1857 - 1912) - O Cortiço, Casa de Pensão, O Mulato</li>
+                                            <li class="list-group-item">Raul Pompeia (1863 - 1895) - O Ateneu, Memórias de um Pobre Diabo </li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <!-- Texto ao lado do card -->
+                    <div>
+                        <h1>Naturalismo (1881 - 1893)</h1>
+                        <p>Escola literária que teve como principais características a <b>objetividade, a impessoalidade
+                                e o retrato fiel da realidade.</b> Surgiu na França, em meados do século XIX, e se
+                            espalhou rapidamente para outros países da Europa e do mundo.
+                        </p>
+                        <p>
+                            Vale ressaltar que o romance naturalista também é conhecido pelo nome <b>“romance de
+                            tese”,</b> pois defende um ponto de vista.
+                            Na literatura, o marco inicial do naturalismo brasileiro é a publicação da obra, em 1881, O
+                            Mulato, do escritor Aluísio Azevedo. Considerado o primeiro romance de tese do Brasil, a
+                            obra aborda o tema do preconceito racial, muito vigente na sociedade da época.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="primeirainfo">
+        <div class="container my-4">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <!-- Card -->
+                    <div class="card" style="width: 100%;">
+                        <img src="image/parnasianismo.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#Modal_Parnasianismo">Obras e Autores</button>
+                            </div>
+                        </div>
+                        <div class="modal" tabindex="-1" id="Modal_Parnasianismo">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Parnasianismo</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="image/poesias.png" class="w-100">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item active bg-dark">Olavo Bilac (1865 - 1918) - Poesias , Poesias Completas</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <!-- Texto ao lado do card -->
+                    <div>
+                        <h1>Parnasianismo (1882 - 1922)</h1>
+                        <p>O Parnasianismo foi um movimento literário que surgiu na França, na segunda metade do século XIX, como uma <b>reação ao Romantismo.</b> Seu nome deriva do "Parnaso", a montanha consagrada a Apolo e às musas da poesia na mitologia grega. No Brasil, o movimento ganhou força no final do século XIX e início do século XX, tendo como principais representantes Olavo Bilac, Raimundo Correia e Alberto de Oliveira. As principais características são:
+                        </p>
+                        <ul>
+                            <li>Culto à Forma</li>
+                            <li>Objetividade e Impessoalidade</li>
+                            <li>Temas Clássicos</li>
+                            <li>Arte pela Arte</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-4 segundainfo">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <!-- Card -->
+                    <div class="card" style="width: 100%;">
+                        <img src="image/simbolismo.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-lg btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#Modal_Simbolismo">Obras e Autores</button>
+                            </div>
+                        </div>
+                        <div class="modal" tabindex="-1" id="Modal_Simbolismo">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Simbolismo</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="image/broqueis.png" class="w-100">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item active bg-dark">Cruz e Souza (1861 - 1898) - Broquéis, Canais, Sonnets</li>
+                                            <li class="list-group-item">Augusto dos Anjos (1884 - 1914) - Eu (1912)</li>
+                                            <li class="list-group-item">Gonçalves Dias (1823 - 1864) - Os Timbiras, Canções Americanas</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <!-- Texto ao lado do card -->
+                    <div>
+                        <h1>Simbolismo (1893 - 1901)</h1>
+                        <p>Movimento literário que surgiu no século XIX e teve como principais características o
+                            <b>subjetivismo, o espiritualismo, a religiosidade e o misticismo.</b> Na época em que se
+                            desenvolveu, o capitalismo e a industrialização estavam se consolidando na cena mundial, e
+                            diversas descobertas científicas transmitiam a ideia de evolução da civilização.
+                        </p>
+                        <p>
+                            Contudo, isso acabou gerando muitos problemas sociais, como o aumento das desigualdades, o
+                            que levou os artistas a negarem a ideia de progresso. Houve grande <b>interesse pelas zonas
+                            mais profundas da mente humana,</b> como o universo inconsciente e subconsciente, mostrando uma
+                            arte mais pessoal, emocional e misteriosa.
+                        </p>
+                        <p>
+                            Simbolismo no Brasil: começou em 1893 com a publicação das obras de Cruz e Sousa: Missal
+                            (prosa) e Broquéis (poesia). O momento é de agitação política, pois, com a Proclamação da
+                            República em 1889, o país estava passando por um momento de transição. Há, assim, uma
+                            transformação na cena política, com a passagem do regime monárquico para o regime
+                            republicano.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container my-4 terceirainfo">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <!-- Card -->
+                    <div class="card" style="width: 100%;">
+                        <img src="image/premodern.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-lg btn-warning" data-bs-toggle="modal"
+                                    data-bs-target="#Modal_Premodern">Obras e Autores</button>
+                            </div>
+                        </div>
+                        <div class="modal" tabindex="-1" id="Modal_Premodern">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Pré-Modernismo</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="image/sertoes.png" class="w-100">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item active bg-dark">Euclides da Cunha (1866 - 1909) - Os Sertões, A Conquista do Brasil</li>
+                                            <li class="list-group-item">Lima Barreto (1881 - 1922) - Triste Fim de Policarpo Quaresma, O Cemitério dos Vivos</li>
+                                            <li class="list-group-item">Monteiro Lobato (1882 - 1948) - Urupês, O Guaraní</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <!-- Texto ao lado do card -->
+                    <div>
+                        <h1>Pré-Modernismo (1900 - 1922)</h1>
+                        <p><b>Momento de transição literária presente entre o simbolismo e o modernismo.</b> Caracteriza-se
+                            pelas produções desde início do ano 1902 até a Semana de Arte Moderna, em 1922.</p>
+                        <p>
+                            Foi na transição da República da Espada para a República Velha, cuja <b>política do café com
+                            leite</b> concentrou o poder nas mãos das oligarquias paulistas e mineiras, que o regionalismo
+                            brasileiro começa a se expandir na virada do século, sendo enfatizado por diversos conflitos
+                            que surgiram entre a <b>classe dominante e a classe dominada.</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-4">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <!-- Card -->
+                    <div class="card" style="width: 100%;">
+                        <img src="image/mordern.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#Modal_Modernismo">Obras e Autores</button>
+                            </div>
+                        </div>
+                        <div class="modal" tabindex="-1" id="Modal_Modernismo">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Modernismo</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="image/macunaima.png" class="w-100">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item active bg-dark">Mário de Andrade (1893 - 1945) - Macunaíma, Pauliceia Desvairada, Amar, Verbo Intransitivo</li>
+                                            <li class="list-group-item">Manuel Bandeira (1886 - 1968) - Ribeira do Lagedo, Libertinagem, O Ritmo Dissoluto</li>
+                                            <li class="list-group-item">Oswald de Andrade (1890 - 1954) - Manifesto Antropofágico, Memórias Sentimentais de Brás Cubas, Pau-Brasil</li>
+                                            <li class="list-group-item">Carlos Drummond de Andrade (1902 - 1987) - Alguma Poesia, Sentimento do Mundo, A Rosa do Povo</li>
+                                            <li class="list-group-item">Cecília Meireles (1901 - 1964) - Viagem, Romanceiro da Inconfidência, Poemas Conceituais</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <!-- Texto ao lado do card -->
+                    <div>
+                        <h1>Modernismo (1980)</h1>
+                        <p>Foi uma tendência artístico-cultural ocorrida na primeira metade do século XX. Impulsionados
+                            por um contexto histórico conturbado, onde grandes transformações estavam em curso, os
+                            artistas e intelectuais modernos passaram a <b>repensar a maneira de produzir arte e
+                            literatura.</b> Eles cada vez mais valorizavam um pensamento crítico. Assim, o modernismo
+                            acontece em um cenário de conquistas tecnológicas, progresso da indústria, <b>aprofundamento do
+                            sistema capitalista e das desigualdades.</b></p>
+                        <p>
+                            Modernismo no Brasil: Este movimento <b>se consolidou com a Semana de Arte Moderna, ocorrida em
+                            1922 no Theatro Municipal, em São Paulo.</b> Os artistas participantes buscavam inspiração na
+                            arte que acontecia na Europa (vanguardas europeias) para produzir trabalhos com caráter
+                            inovador e ao mesmo tempo nacional.
+                        </p>
+                        <p>
+                            Movimento literário Modernista no Brasil: Os escritores passam a usar as palavras de maneira
+                            <b>mais flexível, abusando de versos livres, linguagem sarcástica e cômica e renúncia à métrica
+                            e à rima.</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer text-center py-4">
+        <div class="container">
+            <h2 class="mb-3">Siga-nos Nas Redes Sociais!</h2>
+            <div class="footer-social-icons d-flex justify-content-center mb-3">
+                <a href="https://www.facebook.com/?locale=pt_BR" class="mx-2">
+                    <img src="image/face.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://www.whatsapp.com/coronavirus/get-started-business?lang=pt_BR" class="mx-2">
+                    <img src="image/whats.png" alt="Whatsapp" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/" class="mx-2">
+                    <img src="image/insta.png" alt="Twitter" class="social-icon">
+                </a>
+            </div>
+            <p class="mb-0">&copy; 2024 Quintal do Brasil. Todos os direitos reservados ao SENAI (Projeto Educacional).</p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <!-- Scripts JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+            const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+        });
+    </script>
+</body>
+
+</html>

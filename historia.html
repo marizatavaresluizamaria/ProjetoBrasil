@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Linha do Tempo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        /* Estilos personalizados para a linha do tempo */
+        body{
+            background-color: #ffffff;
+        }
+        .navbar {
+            background-color: #fdfff2;
+            padding: 10px;
+        }
+        .navbar-brand img {
+            max-height: 50px;
+        }
+        .nav-link {
+            color: #0e0249 !important;
+            font-weight: bold;
+        }
+        .nav-link:hover {
+            color: #fff84e !important;
+        }
+        .navbar-toggler {
+            border: none;
+        }
+        .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHN0eWxlPSJmaWxsOiBub25lOyBzdHJva2U6IHdoaXRlOyBzdHJva2UtbGluZWpvaW4tY29sb3I6IHdoaXRlOyIvPjwvc3ZnPg==');
+        }
+        .navbar-nav {
+            margin-left: auto;
+        }
+        .footer {
+            background-color: #60cd52;
+            color: #02641c;
+        }
+        .footer-social-icons {
+            flex-wrap: wrap;
+        }
+        .social-icon {
+            width: 90px;
+            height: 50px;
+            transition: transform 0.3s;
+        }
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+        .footer p {
+            margin: 0;
+        }
+        .primeirainfo h1{
+            font-size: 80px;
+            color: #5263ff;
+            font-weight: bolder;
+            
+        }
+        .primeirainfo b{
+            color: #5263ff;
+        }
+        .segundainfo h1{
+            font-size: 80px;
+            color: #60cd52;
+            font-weight: bolder;
+        }
+        .segundainfo b{
+            color: #60cd52;
+        }
+        p{
+            font-size: 20px;
+            color: #0e0249;
+        }
+        .rounded-img {
+    border-radius: 15px; /* Arredonda os cantos */
+    max-width: 100%; /* Garante que a imagem não ultrapasse o container */
+    display: block; /* Torna a imagem um elemento de bloco */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color:#0e0249;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            box-sizing: border-box;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -13px;
+            background-color:#0e0249;
+            border: 4px solid #0e0249;
+            top: 20px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item-left {
+            left: 0;
+        }
+
+        .timeline-item-right {
+            left: 50%;
+        }
+
+        .timeline-item-content {
+            padding: 20px;
+            background-color: #f7f7f7;
+            position: relative;
+            border-radius: 8px;
+        }
+
+        .timeline-item-right::after {
+            left: -15px;
+        }
+
+        .timeline-item h4 {
+            margin-top: 0;
+            color:#02641c;
+            font-size: 60px;
+            font-weight: bolder;
+        }
+
+        .timeline-item b {
+            color: #02641c;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="image/7.png" alt="Logo" width="400" height="105">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="literatura.html">Literatura no Brasil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="historia.html">História no Brasil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cultura.html">Cultura Indígena e Afrodescendente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Página Inicial</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+    <div class="primeirainfo">
+        <h1>Assuntos que mais caem (ENEM)</h1>
+    </div>
+</div>
+    <div class="container">
+        <div class="timeline">
+            <!-- Evento da linha do tempo (esquerda) -->
+            <div class="timeline-item timeline-item-left">
+                <div class="timeline-item-content">
+                    <h4>Idade Média</h4>
+                    <p>Ocorreu nos anos de 476 a 1453 (com a queda de Constantinopla). Esse período é frequentemente dividido em Alta Idade Média (do século V ao X) e Baixa Idade Média (do século XI ao XV).</p>
+                    <br>
+                    <ul>
+                        <li><b>Feudalismo:</b>
+                            Sistema econômico, político e social predominante na Europa durante a Idade Média. Ele se baseava na posse de terras (feudos) e na relação de <b>suserania e vassalagem,</b> onde o senhor feudal oferecia proteção e terras ao vassalo em troca de lealdade e serviços, principalmente militares. <b>Os servos,</b> que trabalhavam nas terras dos senhores, não eram escravos, mas também não tinham plena liberdade, pois estavam ligados ao feudo e deviam prestar serviços e pagar impostos.</li>
+                            <br>
+                            <li><b>Igreja Católica e Poder Religioso:</b>
+                            A Igreja Católica foi a instituição mais influente naquele momento, exercendo <b>grande poder político, econômico e social.</b> Além de ser a principal autoridade espiritual, a Igreja também controlava vastas extensões de terras e tinha <b>grande influência sobre reis e nobres.</b> A religião permeava todos os aspectos da vida medieval, desde o nascimento até a morte, e a Igreja desempenhava um papel central na educação e na preservação do conhecimento, especialmente através dos mosteiros.</li>
+                            <br>
+                            <li><b>Cruzadas:</b>
+                                As Cruzadas foram expedições militares promovidas pela Igreja Católica entre os séculos XI e XIII, <b>com o pretexto de recuperar Jerusalém e outros territórios do controle muçulmano.</b> Além do seu propósito religioso, as Cruzadas tiveram consequências importantes, como o fortalecimento do comércio entre o Oriente e o Ocidente, o aumento do poder da Igreja e o intercâmbio cultural entre cristãos e muçulmanos. Elas também <b>contribuíram para o declínio do feudalismo, ao expor a Europa a novas ideias, tecnologias e produtos.</b></li>
+                                <br>
+                            <li><b>Renascentismo Urbano e Comercial:</b>
+                                A partir do século XI, a Europa começou a vivenciar um processo de renascimento urbano e comercial, marcado pelo <b>crescimento das cidades e pelo aumento das atividades mercantis.</b> Esse processo foi impulsionado pelo fim das invasões bárbaras e vikings, que trouxe maior segurança, e pelo aumento da produção agrícola, que permitiu o surgimento de um excedente econômico. Com o renascimento urbano, surgiram novas formas de organização social e econômica, como as <b>guildas e as corporações de ofício, e as feiras medievais se tornaram centros de comércio</b> e intercâmbio cultural.</li>
+                                <br>
+                            <li><b>Peste Negra:</b>
+                                A Peste Negra foi uma pandemia que assolou a Europa no século XIV, entre 1347 e 1351, dizimando cerca de um terço da população europeia. Essa catástrofe teve enormes impactos sociais, econômicos e culturais, <b>levando ao questionamento da autoridade da Igreja (que não conseguiu explicar ou deter a praga),</b> à escassez de mão-de-obra, ao aumento dos salários para os trabalhadores sobreviventes e ao enfraquecimento do sistema feudal, já que <b>muitos camponeses abandonaram os feudos em busca de melhores condições de vida nas cidades.</b></li>
+                                <br>
+                            <li><b>Cultura e Conhecimento na Idade Média:</b>
+                                Durante a Idade Média, a cultura e o conhecimento estavam amplamente vinculados à Igreja e aos mosteiros, que eram os principais centros de produção e preservação do conhecimento. <b>A educação era restrita às elites e aos clérigos,</b> e a maioria da população era analfabeta. No entanto, no final da Idade Média, especialmente a partir do século XIII, houve um renascimento intelectual conhecido como Escolástica, que buscava conciliar a fé cristã com a razão, influenciado pelo redescobrimento das obras de filósofos gregos, como Aristóteles, e pelo contato com o pensamento muçulmano e judaico.</li>
+                                <br>
+                            <li><b>Fim da Idade Média e Transição para a Idade Moderna:</b>
+                                O final da Idade Média é marcado por uma série de transformações que culminam na transição para a Idade Moderna. Entre esses eventos estão a <b>crise do feudalismo, a ascensão das monarquias nacionais, o Renascimento Cultural,</b> que resgatou os valores da Antiguidade Clássica, e <b>as Grandes Navegações, que expandiram o conhecimento europeu e deram início à era dos descobrimentos.</b></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Evento da linha do tempo (direita) -->
+            <div class="timeline-item timeline-item-right">
+                <div class="timeline-item-content">
+                    <h4>Idade Moderna</h4>
+                    <p>Aproximadamente de 1453 a 1789 (até a Revolução Francesa), a Idade Moderna foi um período de transformações profundas que moldaram o mundo contemporâneo. Este período é marcado por três grandes mudanças que tiveram impacto duradouro: as descobertas marítimas, a Reforma Protestante e a Revolução Científica. </p>
+                    <br>
+                    <ul>
+                        <li><b>Descobrimentos Marítimos:</b>
+                    Exploradores como <b>Cristóvão Colombo, Vasco da Gama e Fernão de Magalhães</b> ampliaram significativamente o conhecimento europeu sobre o mundo. Colombo, em 1492, navegou para o Novo Mundo, descobrindo as Américas para a Europa. Vasco da Gama encontrou a rota marítima para a Índia em 1498, estabelecendo uma rota crucial para o comércio de especiarias. Essas explorações impulsionaram a <b>expansão colonial e o comércio global,</b> estabelecendo a base para o sistema colonial europeu e para o capitalismo global emergente.</li>
+                            <li><b>Reforma Protestante</b>
+                                Iniciada por Martinho Lutero em 1517, com a publicação das 95 Teses, desafiou a autoridade da Igreja Católica e levou à fragmentação do cristianismo ocidental. Lutero <b>criticou a venda de indulgências e outras práticas da Igreja, que considerava corruptas.</b> Esse movimento gerou uma série de novas denominações cristãs e reformas religiosas na Europa, como o Calvinismo e o Anglicanismo, <b>influenciando profundamente a religião, a política e a cultura da época.</b>
+                            </li>
+                            <li><b>Revolução científica</b>
+                                Começou no século XVI e continuou no século XVII, transformou a maneira como os seres humanos compreendiam o mundo natural. Cientistas como Nicolau Copérnico, Galileu Galilei e Isaac Newton desafiaram o modelo geocêntrico, propondo o heliocentrismo e desenvolvendo a física moderna. As <b>descobertas e métodos científicos</b> dessa época não só avançaram o conhecimento sobre o universo, mas também estabeleceram as bases do método científico, promovendo uma abordagem mais racional e empírica para a investigação científica.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Evento da linha do tempo (esquerda) -->
+            <div class="timeline-item timeline-item-left">
+                <div class="timeline-item-content">
+                    <h4>Brasil Colônia: 1500 (chegada dos portugueses) a 1822 (Independência do Brasil).</h4>
+                    <p>Foi marcado por uma série de eventos e transformações que moldaram a história do país. Estes momentos são fundamentais para entender a formação social, econômica e política do Brasil. A seguir, destacam-se os principais acontecimentos desse período.</p>
+                    <br>
+                    <ul>
+                        <li><b>A Chegada dos Portugueses e a Colonização:</b>Em 1500, Pedro Álvares Cabral chegou ao Brasil, iniciando o processo de colonização portuguesa. A partir de 1530, com a necessidade de consolidar a posse do território e aumentar a produção de riquezas, o governo português implementou o sistema de capitanias hereditárias. Esse sistema dividiu o território em grandes faixas de terra, concedidas a donatários que deveriam promover o desenvolvimento da colônia. Embora o sistema tenha enfrentado dificuldades, principalmente com a falta de investimento e a resistência dos indígenas, ele marcou o início da colonização efetiva.
+                            </li>
+                            <li><b>O Ciclo do Ouro:</b>No final do século XVII e início do XVIII, a descoberta de ouro em Minas Gerais deu início ao Ciclo do Ouro. Essa riqueza mineral atraiu um grande número de colonos e resultou em um aumento significativo da produção econômica e do comércio. A busca por ouro e a mineração também geraram importantes mudanças sociais e econômicas, como o crescimento das cidades e o fortalecimento da estrutura colonial. As minas de ouro contribuíram para o desenvolvimento do Brasil, mas também criaram tensões e conflitos, como as Revoltas Coloniais.
+                            </li>
+                            <li><b>A Revolta dos Emboabas:</b>Entre 1707 e 1709, a Revolta dos Emboabas foi um conflito significativo durante o Ciclo do Ouro. Os emboabas, recém-chegados à região das minas, enfrentaram os paulistas, que se consideravam os legítimos descobridores e exploradores do ouro. O conflito resultou na vitória dos emboabas e na consolidação do controle da Coroa portuguesa sobre as minas. Esse evento destacou as tensões entre grupos coloniais e a crescente intervenção portuguesa na administração colonial.
+                            </li>
+                            <li><b>A Independência do Brasil:</b>A partir do início do século XIX, o Brasil começou a se preparar para a independência. Em 1808, a Família Real portuguesa se transferiu para o Brasil devido às invasões napoleônicas em Portugal. A presença da corte no Brasil trouxe importantes mudanças políticas e sociais, incluindo a abertura dos portos às nações amigas e a criação de instituições que prepararam o país para uma maior autonomia. A independência foi proclamada em 7 de setembro de 1822, com Dom Pedro I declarando a separação do Brasil de Portugal, marcando o fim do período colonial e o início do Império Brasileiro.
+                            </li>
+                            
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Evento da linha do tempo (direita) -->
+            <div class="timeline-item timeline-item-right">
+                <div class="timeline-item-content">
+                    <h4>Estado Novo e Populismo: Estado Novo no Brasil foi de 1937 a 1945; o período populista no Brasil se estende aproximadamente de 1945 até o golpe militar de 1964.</h4>
+                    <p>Compreender esses períodos é essencial para analisar a evolução política do país.
+                    </p>
+                    <br>
+                    <ul>
+                        <li><b>Estado Novo (1937-1945)</b>
+                            Vargas estabeleceu o Estado Novo, um regime autoritário que centralizou o poder e promoveu uma série de reformas políticas e sociais: 
+                            <p>
+                            Criação da Constituição de 1937 (Vargas implementou uma nova Constituição que consolidou o poder executivo e suprimia as liberdades civis. O Estado Novo foi caracterizado por um controle rígido da imprensa, censura e repressão aos opositores políticos);</p>
+                            <p>
+                            Desenvolvimento Econômico e Social (Durante o Estado Novo, Vargas promoveu a industrialização e o desenvolvimento econômico do Brasil. Foram criadas empresas estatais, como a Companhia Siderúrgica Nacional, CSN, e a Petrobrás, que desempenharam papéis cruciais no desenvolvimento da infraestrutura do país);</p>
+                            <p>Fim do Estado Novo (O regime do Estado Novo terminou em 1945, quando Vargas foi forçado a renunciar em meio a pressões internas e externas por redemocratização. A pressão por eleições diretas e a insatisfação com o governo autoritário contribuíram para a sua queda);</p></li>
+
+                            <li><b>Populismo (1945-1964)</b>
+                                <p>
+                                    O período populista foi marcado por uma série de governos que tentaram mobilizar e satisfazer as demandas das massas urbanas e rurais. Entre os líderes populistas mais notáveis estão Getúlio Vargas, que voltou ao poder em 1951, e Juscelino Kubitschek (1956-1961)
+                                    ;</p>
+                                <p>
+                                    Kubitschek é famoso pelo seu slogan "cinquenta anos em cinco", que refletia seu ambicioso plano de desenvolvimento econômico, incluindo a construção de Brasília, a nova capital do Brasil, e a promoção da indústria automobilística e da infraestrutura;</p>
+                    </ul>
+                </div>
+            </div>
+
+             <!-- Evento da linha do tempo (esquerda) -->
+             <div class="timeline-item timeline-item-left">
+                <div class="timeline-item-content">
+                    <h4>Tempo Presente: Refere-se ao período contemporâneo, que inclui a segunda metade do século XX até os dias atuais.</h4>
+                    <br>
+                    <ul>
+                        <li><b>Redemocratização e a Constituição de 1988:</b>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deleniti tempore voluptas. Officiis eum corporis totam eius alias quod delectus? Consectetur dolore vitae qui optio doloremque inventore. Dolor, corporis pariatur?</li>
+                            <li><b>Crises Econômicas e Reformas:</b>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, corporis praesentium impedit fugit eum repellat aperiam. In, sint! Pariatur, mollitia provident eum sapiente voluptate dicta nihil facilis autem aperiam repellat.</li>
+                            <li><b>Operação Lava Jato e Corrupção:</b>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, porro! Ea veritatis illum dolores corrupti vitae ipsam, consequuntur nostrum minima nulla enim officiis, ut laboriosam, eos quaerat vel? Quam, quis.</li>
+                            <li><b>Polarização Política e Crises Institucionais:</b>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut placeat animi explicabo eos libero ex, ipsum est? Molestiae voluptas, perspiciatis obcaecati debitis amet mollitia ipsum quia est, ducimus ea alias?</li>
+                            <li><b>Desafios Sociais e Ambientais:</b>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit pariatur necessitatibus ducimus doloribus error enim perspiciatis rerum. Repellendus sed ex dolor saepe natus assumenda, eos cupiditate tenetur deleniti eum voluptatum.</li>
+                    </ul>
+                </div>
+            </div>
+
+             <!-- Evento da linha do tempo (esquerda) -->
+             <div class="timeline-item timeline-item-right">
+                <div class="timeline-item-content">
+                    <h4>O que poderia cair?</h4>
+                    <br>
+                    <ul>
+                        <li>Mudanças Climáticas e Sustentabilidade</li>
+                        <li>Desigualdade Social e Econômica</li>
+                        <li>Crise Ambiental e Preservação dos Recursos Naturais</li>
+                        <li>Direitos Humanos e Questões Sociais</li>
+                        <li>Pandemia e Saúde Pública</li>
+                        <li>Tecnologia e Sociedade</li>
+                        <li>Política e Governança</li>
+                        <li>Economia e Desenvolvimento</li>
+                    </ul>
+                </div>
+            </div>
+              <!-- Evento da linha do tempo (direita) -->
+              <div class="timeline-item timeline-item-left">
+                <div class="timeline-item-content">
+                    <h4>Temas de redação </h4>
+                    <ul>
+                        <li>Impactos das Mudanças Climáticas na Vida Urbana e Rural</li>
+                        <li>Desigualdade Social e Acesso à Educação de Qualidade</li>
+                        <li>Desafios da Inclusão Digital em um Mundo Conectado</li>
+                        <li>Saúde Mental e Bem-Estar em Tempos de Crise</li>
+                        <li>Preservação Ambiental e Desenvolvimento Sustentável</li>
+                        <li>A Influência das Redes Sociais na Formação da Opinião Pública</li>
+                        <li>Desafios e Oportunidades da Mobilidade Urbana</li>
+                        <li>Direitos Humanos e Diversidade: Avanços e Desafios</li>
+                        <li>O Futuro do Trabalho e as Novas Tecnologias</li>
+                        <li>Política de Drogas e Saúde Pública</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <!-- Rodapé -->
+    <footer class="footer text-center py-4">
+        <div class="container">
+            <h2 class="mb-3">Siga-nos Nas Redes Sociais!</h2>
+            <div class="footer-social-icons d-flex justify-content-center mb-3">
+                <a href="https://www.facebook.com/?locale=pt_BR" class="mx-2">
+                    <img src="image/face.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://www.whatsapp.com/coronavirus/get-started-business?lang=pt_BR" class="mx-2">
+                    <img src="image/whats.png" alt="Whatsapp" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/" class="mx-2">
+                    <img src="image/insta.png" alt="Twitter" class="social-icon">
+                </a>
+            </div>
+            <p class="mb-0">&copy; 2024 Quintal do Brasil. Todos os direitos reservados ao SENAI (Projeto Educacional).</p>
+        </div>
+    </footer>
+
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+
+</body>
+</html>
