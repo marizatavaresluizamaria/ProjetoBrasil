@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Linha do Tempo</title>
+    <link rel="shortcut icon" type="imagex/png" href="image/Logo2.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style>
-        /* Estilos personalizados para a linha do tempo */
+        
         body{
             background-color: #ffffff;
         }
@@ -26,9 +27,6 @@
         }
         .navbar-toggler {
             border: none;
-        }
-        .navbar-toggler-icon {
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHN0eWxlPSJmaWxsOiBub25lOyBzdHJva2U6IHdoaXRlOyBzdHJva2UtbGluZWpvaW4tY29sb3I6IHdoaXRlOyIvPjwvc3ZnPg==');
         }
         .navbar-nav {
             margin-left: auto;
@@ -73,79 +71,81 @@
             color: #0e0249;
         }
         .rounded-img {
-    border-radius: 15px; /* Arredonda os cantos */
-    max-width: 100%; /* Garante que a imagem não ultrapasse o container */
-    display: block; /* Torna a imagem um elemento de bloco */
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
-}
+        border-radius: 15px; /* Arredonda os cantos */
+        max-width: 100%; /* Garante que a imagem não ultrapasse o container */
+        display: block; /* Torna a imagem um elemento de bloco */
+        margin: 0 auto; /* Centraliza a imagem horizontalmente */
+        }
+        /*O quanto a linha da TIMELINE se estende*/
         .timeline {
             position: relative;
             padding: 40px 0;
         }
-
+        /*Configurações da LINHA*/
         .timeline::before {
             content: '';
             position: absolute;
             width: 4px;
             background-color:#0e0249;
+            /*ajusta a localização da linha em relação ao container pai*/
             top: 0;
             bottom: 0;
             left: 50%;
             margin-left: -2px;
         }
-
         .timeline-item {
             position: relative;
+            /*Isso faz com que o box de informação ocupe apenas metade da tela*/
             width: 50%;
             padding: 20px 40px;
             box-sizing: border-box;
         }
-
+        /*Cria a bolinha acima do box de informação*/
         .timeline-item::after {
             content: '';
             position: absolute;
-            width: 25px;
-            height: 25px;
-            right: -13px;
+            width: 20px;
+            height: 20px;
+            right: -11px;
             background-color:#0e0249;
             border: 4px solid #0e0249;
             top: 20px;
             border-radius: 50%;
-            z-index: 1;
         }
-
+        /*Faz com que o BOX APAREÇA À ESQUERDA*/
         .timeline-item-left {
             left: 0;
         }
-
+        /*Faz com que o BOX APAREÇA À DIREITA*/
         .timeline-item-right {
             left: 50%;
         }
-
         .timeline-item-content {
             padding: 20px;
             background-color: #f7f7f7;
             position: relative;
             border-radius: 8px;
         }
-
         .timeline-item-right::after {
-            left: -15px;
+            left: -11px;
         }
-
+        /*Definição das características da Identidade Visual*/
         .timeline-item h4 {
             margin-top: 0;
             color:#02641c;
             font-size: 60px;
             font-weight: bolder;
         }
-
         .timeline-item b {
             color: #02641c;
+        }
+        .timeline li{
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
+    <!--Navbar-->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -173,14 +173,16 @@
         </div>
     </nav>
 
-    <div class="container my-5">
+<!--Título-->
+<div class="container my-5">
     <div class="primeirainfo">
         <h1>Assuntos que mais caem (ENEM)</h1>
     </div>
 </div>
+
+<!-- Info da linha do tempo (esquerda) -->
     <div class="container">
         <div class="timeline">
-            <!-- Evento da linha do tempo (esquerda) -->
             <div class="timeline-item timeline-item-left">
                 <div class="timeline-item-content">
                     <h4>Idade Média</h4>
@@ -211,7 +213,7 @@
                 </div>
             </div>
 
-            <!-- Evento da linha do tempo (direita) -->
+           <!-- Info da linha do tempo (Direita) -->
             <div class="timeline-item timeline-item-right">
                 <div class="timeline-item-content">
                     <h4>Idade Moderna</h4>
@@ -231,7 +233,7 @@
                 </div>
             </div>
 
-            <!-- Evento da linha do tempo (esquerda) -->
+             <!-- Info da linha do tempo (esquerda) -->
             <div class="timeline-item timeline-item-left">
                 <div class="timeline-item-content">
                     <h4>Brasil colônia</h4>
@@ -254,7 +256,7 @@
                 </div>
             </div>
 
-            <!-- Evento da linha do tempo (direita) -->
+           <!-- Info da linha do tempo (Direita) -->
             <div class="timeline-item timeline-item-right">
                 <div class="timeline-item-content">
                     <h4>Estado Novo e Populismo</h4>
@@ -280,10 +282,10 @@
                 </div>
             </div>
 
-             <!-- Evento da linha do tempo (esquerda) -->
+              <!-- Info da linha do tempo (esquerda) -->
              <div class="timeline-item timeline-item-left">
                 <div class="timeline-item-content">
-                    <h4>Tempo Presente</h4>
+                    <h4>Tempo contemporâneo</h4>
                     <br>
                     <ul>
                         <p> Refere-se ao período contemporâneo, que inclui a segunda metade do século XX até os dias atuais.</p>
@@ -300,7 +302,8 @@
                 </div>
             </div>
 
-             <!-- Evento da linha do tempo (esquerda) -->
+           
+           <!-- Info da linha do tempo (Direita) -->
              <div class="timeline-item timeline-item-right">
                 <div class="timeline-item-content">
                     <h4>Temas de questões que poderiam cair</h4>
@@ -317,7 +320,8 @@
                     </ul>
                 </div>
             </div>
-              <!-- Evento da linha do tempo (direita) -->
+
+               <!-- Info da linha do tempo (esquerda) -->
               <div class="timeline-item timeline-item-left">
                 <div class="timeline-item-content">
                     <h4>Temas de redação </h4>
@@ -336,8 +340,6 @@
 
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
     <!-- Rodapé -->
     <footer class="footer text-center py-4">
