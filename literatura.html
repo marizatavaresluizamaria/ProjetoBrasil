@@ -91,6 +91,12 @@
             margin: 0 auto;
             /* Centraliza a imagem horizontalmente */
         }
+        .modal-body img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: contain;
+}
     </style>
 </head>
 
@@ -125,24 +131,6 @@
         </div>
     </nav>
 
-    <!-- Anúncio do Podcast -->
-    <div class="container my-5">
-        <div class="info-section segundainfo">
-            <h1>Lançamos um Podcast!</h1>
-        </div>
-        <div style="display: flex; justify-content: center;">
-        <video controls width="600">
-            <source src="video/AUDIOGRAMAPodcastLiteratura.mp4" type="video/mp4">
-            Seu navegador não suporta o elemento de vídeo.
-        </video>
-        </div>
-        <br>
-        <div style="display: flex; justify-content: center;">
-        <a class="btn btn-success" href="https://podcasters.spotify.com/pod/show/gizskthjjk" role="button" style="margin-bottom: 200px;">Ouvir mais</a>
-    </div>
-</div>
-    </div>
-
     <!-- Conteúdo principal-->
     <div class="primeirainfo">
         <div class="container my-4">
@@ -150,7 +138,7 @@
                 <div class="col-md-4">
                     
                     <!--O card com botão e imagem-->
-                    <div class="card" style="width: 100%;">
+                    <div class="card" style="width: 100;">
                         <img src="image/quinhentismo.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal"
@@ -213,7 +201,7 @@
         </div>
 
         <!--O card com botão e imagem-->
-        <div class="container my-4 segundainfo">
+        <div class="container my-4 segundainfo modal-body">
             <div class="row align-items-center">
                 <div class="col-md-4">
 
@@ -783,6 +771,24 @@
         </div>
     </div>
     </div>
+
+        <!-- Anúncio do Podcast -->
+        <div class="container my-5">
+            <div class="info-section segundainfo">
+                <h1>Acesse nosso Podcast!</h1>
+            </div>
+            <div style="display: flex; justify-content: left;">
+            <video controls width="600">
+                <source src="video/AUDIOGRAMAPodcastLiteratura.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+            </div>
+            <br>
+            <div style="display: flex; justify-content: left;">
+            <a class="btn btn-success" href="https://podcasters.spotify.com/pod/show/gizskthjjk" role="button" style="margin-bottom: 100px;">Ouvir mais</a>
+        </div>
+    </div>
+        </div>
 
     <!-- Rodapé -->
     <footer class="footer text-center py-4">
